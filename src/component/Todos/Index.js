@@ -72,7 +72,7 @@ function App() {
   return(
     <>
     <h1 style={{textAlign: 'center'}}>DANH SÁCH THÔNG TIN HỌC VIÊN</h1>
-    <div style={{display: 'flex', flexDirection: 'column', width: 400, margin: '0 auto'}}>
+    <div style={{display: 'flex', flexDirection: 'column', width: '50%', margin: '0 auto'}}>
         <input 
         ref={inputRef}
         style={{marginBottom: 5, padding: 10}} placeholder='Enter Name...' 
