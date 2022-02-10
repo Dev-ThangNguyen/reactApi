@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import clsx from 'clsx'
+import { Link, Route, Routes } from 'react-router-dom'
+import Index from './component/Todos/Index.js'
+import styles from './component/Todos/index.module.scss'
+import Home from './component/Home/Home.js'
+import Page_1 from './component/Page_1/Page_1.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+function App () {
+
+  return(
+    <div className={clsx(styles.wraps)}>
+      <header className={clsx(styles.header)}>
+          <Link to='/'>Todos</Link>
+          <Link to='/page-1'>Page_1</Link>
+          <Link to='/page-2'>Page-2</Link>
       </header>
+      <Routes>
+        <Route path='/' element={<Index/>}/>
+        <Route path='/page-1' element={<Home />}/>
+        <Route path='/page-2' element={<Page_1/>}/>
+      </Routes>
+      
     </div>
-  );
+  )
 }
 
 export default App;
